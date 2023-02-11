@@ -1,3 +1,10 @@
+class Cuenta{
+    int numero;
+    String titular;
+    double saldo;
+}
+
+
 public class CrearCuenta {
     public static void main(String[] args) {
         Cuenta cuenta = new Cuenta();
