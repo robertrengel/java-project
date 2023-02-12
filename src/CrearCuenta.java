@@ -1,16 +1,10 @@
-class Cuenta{
-    int numero;
-    String titular;
-    double saldo;
-}
-
-
 public class CrearCuenta {
     public static void main(String[] args) {
         Cuenta cuenta = new Cuenta();
         cuenta.numero = 0001;
         cuenta.titular = "Robert";
         cuenta.saldo = 100.0;
+        cuenta.depositar(50.0);
         
         Cuenta cuenta2 = new Cuenta();
         cuenta2.numero = 0002;
@@ -25,6 +19,9 @@ public class CrearCuenta {
         System.out.println("Cuenta 1: " + cuenta.numero + " " + cuenta.titular + " " + cuenta.saldo);
         System.out.println("Cuenta 2: " + cuenta2.numero + " " + cuenta2.titular + " " + cuenta2.saldo);
         System.out.println("Cuenta 3: " + cuenta3.numero + " " + cuenta3.titular + " " + cuenta3.saldo);
+
+        cuenta.retirar(100.0);
+        System.out.println("Cuenta 1: " + cuenta.numero + " " + cuenta.titular + " " + cuenta.saldo);
     }
 
 
