@@ -1,7 +1,13 @@
-public class Cuenta{
+class Cuenta{
     int numero;
-    String titular;
-    double saldo;
+    int agencia;
+    private double saldo;
+    Cliente titular = new Cliente();
+
+
+    double saldoCuenta(){
+        return this.saldo;
+    }
 
     void depositar(double cantidad){
         this.saldo += cantidad;
