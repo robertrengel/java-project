@@ -1,12 +1,47 @@
 class Cuenta{
-    int numero;
-    int agencia;
+    private int numero;
+    private int agencia;
     private double saldo;
-    Cliente titular = new Cliente();
+    private Cliente titular = new Cliente();
+    private static int total = 0;
 
+    public Cuenta(int agencia){
+        if(agencia <= 0){
+            this.agencia = 1;
+        }
+        this.agencia = agencia;
+        total++;
+    }
 
-    double saldoCuenta(){
+    public static int getTotal() {
+        return total;
+    }
+
+    double getSaldo(){
         return this.saldo;
+    }
+
+    int getNumero(){
+        return this.numero;
+    }
+
+    int getAgencia(){
+        return this.agencia;
+    }
+
+    public Cliente getTitular() {
+        return titular;
+    }
+
+    void setNumero(int numero){
+        if (numero < 0){
+            this.numero = 0;
+        }
+        this.numero = numero;
+    }
+
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
     }
 
     void depositar(double cantidad){
