@@ -10,6 +10,10 @@ public class Cliente {
     private String tipoCuenta;
     private Prestamo prestamo = new Prestamo();
 
+    public Cliente(String nombre){
+        this.nombre = nombre;
+    }
+
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }

@@ -2,14 +2,15 @@ class Cuenta{
     private int numero;
     private int agencia;
     private double saldo;
-    private Cliente titular = new Cliente();
+    private Cliente titular;
     private static int total = 0;
 
-    public Cuenta(int agencia){
+    public Cuenta(int agencia, String titular) {
         if(agencia <= 0){
             this.agencia = 1;
         }
         this.agencia = agencia;
+        this.titular = new Cliente(titular);
         total++;
     }
 
