@@ -1,7 +1,7 @@
-class Cuenta{
+public abstract class Cuenta{
     private int numero;
     private int agencia;
-    private double saldo;
+    protected double saldo;
     private Cliente titular;
     private static int total = 0;
 
@@ -45,9 +45,11 @@ class Cuenta{
         this.titular = titular;
     }
 
-    void depositar(double cantidad){
-        this.saldo += cantidad;
-    }
+    public abstract void depositar(double cantidad);
+
+    // void depositar(double cantidad){
+    //     this.saldo += cantidad;
+    // }
 
     boolean retirar(double cantidad){
         if(this.saldo >= cantidad){

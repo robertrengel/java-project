@@ -8,5 +8,10 @@ public class CuentaCorriente extends Cuenta {
      public boolean retirar(double cantidad) {
          return super.retirar(cantidad + 0.2);
      }
+
+    @Override
+    public void depositar(double cantidad) {
+        this.saldo += cantidad;
+    }
     
 }
